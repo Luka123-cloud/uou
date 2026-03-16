@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Love+Ya+Like+A+Sister&family=Lustria&family=Oldenburg&family=Paytone+One&family=Preahvihear&family=Protest+Strike&family=Righteous&family=Solitreo&family=ZCOOL+QingKe+HuangYou&display=swap');
+.ass{
+  position: fixed;
+  z-index: 1000;
+  color: #1C1B19;
+  font-size: 16px;
+  top: 0;
+  display: flex;
+  left: 0;
+  right: 0;
+  height: 60px;
+  transition: all 1s ease;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  transition: color 1s ease;
+  padding: 5px 20px;
+}
+.ass.change,
+.ass.change * {
+  color: #EDE7DB !important;
+}
+
+.word-container {
+  position: relative;
+  height: 15px;
+  width: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+        
+.word {
+  margin-top: -0.2%;
+  position: relative;
+  transition: all 0.5s ease;
+}
+        
+.word.original {
+  top: 0;
+  opacity: 1;
+}
+        
+.word.clone {
+  bottom: -40px;
+  opacity: 0;
+}
+        
+.word-container:hover .word.original {
+  top: -50px;
+  opacity: 0;
+}
+        
+.word-container:hover .word.clone {
+  bottom: 35px;
+  opacity: 1;
+}
+
+.as{
+  font-family: 'League Spartan';
+  z-index: 1000;
+  font-weight: 450;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  margin-left: 30px;
+  
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: #1C1B19;
+}
+
+.ll {
+  z-index: 1000;
+  font-family: 'Protest Strike', 'Lucida Sans Regular';
+}
+.right-links {
+  display: flex;
+}
+.sa{
+  margin-top: -0.9%;
+  border-color: #1C1B19;
+  box-shadow: #1C1B19;
+  padding: 3px;
+  border-radius: 15%;
+  border: 1.5px solid;
+}
+
+.about{
+    background-color: #B6A897;
+}
+.title{
+    top: 0;
+    margin-top: 5%;
+    font-size: 12rem;
+    text-align: center;
+    justify-content: center;
+    color: #1C1B19;
+    text-transform: uppercase;
+    font-family: 'League Spartan';
+}
+.quote1{
+    text-align: center;
+  color: #1C1B19;
+  font-family: 'Love Ya Like A Sister';
+  font-size: 3rem;
+  width: 86%;
+  height: auto;
+  line-height: 1.2;
+  margin: 0 auto; 
+}
+
+.story {
+    font-family: 'League Spartan';
+    color: #1C1B19;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: left;
+    width: 36%;
+    line-height: 1.5;
+    font-size: 20px;
+    margin-top: 7%;
+}
+
+.head {
+    font-family: 'League Spartan';
+    color: #1C1B19;
+    font-size: 30px;
+    font-weight: 800;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.story2 {
+    font-family: 'League Spartan';
+    color: #1C1B19;
+    width: 36%;
+    line-height: 1.5;
+    font-size: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: left;
+}
+
+.text {
+    font-family: 'League Spartan';
+    color: #1C1B19;
+    text-align: left;
+    justify-content: center;
+    line-height: 1.5;
+    width: 36%;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+.cardbox {
+  margin: 0;
+  margin-top: 5%;
+  padding: 100px;
+  background-color: #1C1B19;
+  border-radius: 20px;
+  z-index: 1;
+}
+.yow{
+  color:  #EDE7DB;
+  font-family: 'Love Ya Like A Sister';
+  font-size: 24px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: left;
+  width: 40%;
+}
+.nn{
+  color: #EDE7DB;
+  font-size: 24px;
+  font-family: 'League Spartan';
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 9%;
+  text-align: center;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+img{
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 3%;
+  left: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.credits{
+  color: #EDE7DB;
+  font-size: 20px;
+  font-family: 'League Spartan';
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 3%;
+  line-height: 2;
+  text-align: center;
+  justify-content: center;
+}
+.credits span{
+  text-decoration: underline;
+  color: #EDE7DB;
+}
+
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  margin-right: 0;
+  margin-top: 4%;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: -80px;
+  transition: transform 0.3s ease, z-index 0.3s;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-50px);
+  z-index: 2;
+}
+
+.card-content {
+  height: 100%;
+  width: 100%;
+  
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 11rem;
+  margin-top: -9%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #1C1B19;
+  padding: 65px;
+}
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:nth-child(1) { background-color: #8F9067; }
+.card:nth-child(2) { background-color: #BE5B2A; }
+.card:nth-child(3) { background-color: #828D94; }
+.card:nth-child(4) { background-color: #D69A3F; }
+.card:nth-child(5) { background-color: #B6A897; }
+
+.card .label {
+  position: absolute;
+  margin-top: -10%;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #453232;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+body.loaded {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}

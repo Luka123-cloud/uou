@@ -1,0 +1,932 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Love+Ya+Like+A+Sister&family=Lustria&family=Oldenburg&family=Paytone+One&family=Preahvihear&family=Protest+Strike&family=Righteous&family=Solitreo&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1C1B19;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: transform 1s ease-in;
+  pointer-events: none; /* Не мешает кликам */
+}
+
+.preloader.show {
+  transform: translateY(0);
+}
+
+.preloader.up {
+  transform: translateY(-100%);
+  transition: transform 1s ease-in;
+}
+
+    .preloader.active {
+      transform: translateY(0);
+    }
+
+    .preloader.hide {
+      transform: translateY(-100%);
+    }
+
+    .preloader-text {
+      color: #EDE7DB;
+      font-family: 'League Spartan';
+      font-weight: 800;
+      font-size: 7rem;
+      display: flex;
+      opacity: 0;
+      animation: appear 0.2s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    .preloader-text span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(0);
+      animation: waveOnce 0.6s ease forwards;
+    }
+
+    .preloader-text span:nth-child(1) { animation-delay: 1.6s; }
+    .preloader-text span:nth-child(2) { animation-delay: 1.7s; }
+    .preloader-text span:nth-child(3) { animation-delay: 1.8s; }
+    .preloader-text span:nth-child(4) { animation-delay: 1.9s; }
+    .preloader-text span:nth-child(5) { animation-delay: 2.0s; }
+    .preloader-text span:nth-child(6) { animation-delay: 2.1s; }
+    .preloader-text span:nth-child(7) { animation-delay: 2.2s; }
+    .preloader-text span:nth-child(8) { animation-delay: 2.3s; }
+
+    @keyframes appear {
+      to { opacity: 1; }
+    }
+
+    @keyframes waveOnce {
+      0% { transform: translateY(0); opacity: 0; }
+      50% { transform: translateY(-15px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .fly-away {
+      animation: flyAway 1s ease-in forwards;
+      animation-delay: 2.8s;
+}
+
+@keyframes flyAway {
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+   }
+}
+
+.content {
+  opacity: 0;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 5s;
+}
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+.ass{
+  position: fixed;
+  z-index: 1000;
+  color: #1C1B19;
+  font-size: 16px;
+  top: 0;
+  display: flex;
+  left: 0;
+  right: 0;
+  height: 60px;
+  transition: all 1s ease;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+.word-container {
+  position: relative;
+  height: 15px;
+  width: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+        
+.word {
+  margin-top: -0.2%;
+  position: relative;
+  transition: all 0.5s ease;
+}
+        
+.word.original {
+  top: 0;
+  opacity: 1;
+}
+        
+.word.clone {
+  bottom: -40px;
+  opacity: 0;
+}
+        
+.word-container:hover .word.original {
+  top: -50px;
+  opacity: 0;
+}
+        
+.word-container:hover .word.clone {
+  bottom: 35px;
+  opacity: 1;
+}
+
+.as{
+  font-family: 'League Spartan';
+  z-index: 1000;
+  font-weight: 450;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  margin-left: 30px;
+  
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: #EDE7DB;
+}
+
+.ll {
+  z-index: 1000;
+  font-family: 'Protest Strike', 'Lucida Sans Regular';
+}
+.right-links {
+  display: flex;
+}
+.sa{
+  margin-top: -0.9%;
+  border-color: #EDE7DB;
+  box-shadow: #EDE7DB;
+  padding: 3px;
+  border-radius: 15%;
+  border: 1.5px solid;
+}
+body, html {
+  margin: 0; padding: 0;
+  height: 200vh;
+  overflow-x: hidden; 
+}
+.horizontal-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100vh;
+  width: 1910vw; 
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+.sds {
+  background-color: #1C1B19;
+}
+.page1-content {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 0 0 100vw;
+  padding: 0.6% 0;
+}
+
+ .pag2 {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.pag2 img{
+  margin-top: -20%;
+  border-radius: 20px;
+  width: 40vh;
+  height: auto;
+}
+
+.phead {
+  color: #EDE7DB;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'League Spartan';
+  font-size: 7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 5%;
+}
+
+.list {
+  color: #EDE7DB;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Love Ya Like A Sister';
+  font-size: 1.9rem;
+  margin-top: 2%;
+}
+
+.page2 {
+  background: #B6A897;
+  border-radius: 20px;
+  flex: 0 0 100vw;
+  z-index: 2;
+}
+.page1, .page2 {
+  height: 100vh;
+  width: 100vh;
+  overflow: hidden;
+}
+
+.page2 .box{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+}
+
+.text-content .pa2{
+  color: #1C1B19;
+  font-family: 'Love Ya Like A Sister';
+  font-size: 2.4rem;
+  width: 60%;
+  margin-top: 8%;
+  margin-left: 7%;
+  line-height: 1;
+  text-align: left;
+  justify-content: left;
+}
+.l{
+  margin-left: 28%;
+  text-align: right;
+  justify-content: right;
+}
+
+
+.text-content .pa21{
+  color: #1C1B19;
+  margin-left: 7%;
+  font-family: 'League Spartan';
+  font-size: 20px;
+  text-transform: uppercase;
+  left: 0;
+  margin-top: 32%;
+}
+
+.text-content .pa22{
+  font-family: 'League Spartan';
+  font-size: 4.3rem;
+  margin-top: 2%;
+  color: #1C1B19;
+  font-weight: 700;
+  margin-left: 7%;
+}
+
+.page2 .image-content img {
+  width: auto;
+  padding: 0;
+  height: 100vh;
+}
+
+.text-content .pa23 {
+  color: #1C1B19;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-left: 47%;
+  margin-top: -30%;
+  width: 39%;
+  font-family: 'League Spartan'; 
+}
+
+.page3{
+  width: 130vw;
+  z-index: 3;
+  margin-left: -0.1%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  flex: 0 0 100vw;
+  background: #EDE7DB;
+  overflow: hidden;
+}
+.page3 .all{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  justify-content: space-between;
+}
+
+.textik .pa3 {
+  color: #1C1B19;
+  font-family: 'Love Ya Like A Sister';
+  font-size: 2.6rem;
+  margin-top: 93%;
+  margin-left: 10%;
+}
+
+.textik .pa32 {
+  color: #1C1B19;
+  font-family: 'League Spartan'; 
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-left: 40%;
+  margin-top: -100%;
+  width: 47%;
+}
+.big-image img{
+  width: 155%;
+  height: auto;
+  object-fit: cover;
+}
+
+.page4{
+  z-index: 4;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  flex: 0 0 45vw;
+  margin-left: -0.1%;
+  background: #747452;
+  overflow: hidden;
+}
+
+.pa4{
+  color: #1C1B19;
+  font-family: 'Oldenburg';
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 200;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.pa41{
+  color: #1C1B19;
+  font-family: 'League Spartan';
+  text-transform: uppercase;
+  font-size: 3.7rem;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+}
+
+.pa43{
+  color: #1C1B19;
+  font-family: 'Oldenburg';
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-content: center;
+}
+.pa42{
+  color: #1C1B19;
+  font-family: 'League Spartan';
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 85%;
+  justify-content: center;
+}
+
+.page5{
+  z-index: 5;
+  margin-left: -0.1%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  flex: 0 0 100vw;
+  background: #8F9067;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.left-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.center-quote {
+  text-align: left;
+}
+
+.right-image {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 50%;
+}
+
+.right-image img {
+  max-width: 70%;
+  margin-right: 15%;
+  height: auto;
+}
+
+.pa5, .pa51, .pa52 {
+  color: #1C1B19;
+  margin-left: 10%;
+  font-family: 'League Spartan';
+}
+.pa5{
+  margin-top: 15%;
+  font-size: 20px;
+  width: 65%;
+  line-height: 1.3;
+}
+
+.pa51 {
+  font-family: 'Oldenburg';
+  font-weight: 650;
+  margin-top: 55%;
+  font-size: 1.3rem;
+}
+
+.pa52 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 7rem;
+}
+
+.pa53 {
+  font-size: 1.8rem;
+  color: #1C1B19;
+  font-family: 'Love Ya Like A Sister';
+  width: 68%;
+  line-height: 1.3;
+  margin-top: 20%;
+}
+
+
+.page7 {
+  z-index:6;
+  flex: 0 0 100vw;
+  margin-left: -0.1%;
+  background: #8F9067;
+  overflow: hidden;
+}
+.cows   {
+  margin-left: 10%;
+  z-index: 6;
+  width: 80vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block; 
+}
+
+.page8 {
+  z-index: 6;
+  flex: 0 0 100vw;
+  margin-left: -1%;
+  background: #8F9067;
+  overflow: hidden;
+}
+
+.mini {
+  font-family: 'Oldenburg';
+  font-size: 18px;
+  color: #1C1B19;
+  margin-top: 6%; 
+  margin-left: 13%;
+}
+
+.quote {
+  font-family: 'League Spartan';
+  margin-top: 0%;
+  margin-left: 13%;
+  color: #1C1B19;
+  width: 90%;
+  text-transform: uppercase;
+  font-size: 9.5rem;
+  justify-content: space-between;
+}
+.quote1 {
+  font-family: 'League Spartan';
+  margin-top: 0%;
+  margin-left: 13%;
+  color: #1C1B19;
+  width: 60%;
+  text-transform: uppercase;
+  font-size: 9.5rem;
+  justify-content: right;
+  text-align: right;
+}
+
+.mini-cont{
+  font-family: 'Oldenburg';
+  font-size: 18px;
+  margin-top: 1.5%;
+  margin-left: 14%;
+  color: #1C1B19;
+}
+
+.wordto{
+  font-family: 'League Spartan';
+  margin-top: 0%;
+  margin-left: 13%;
+  color: #1C1B19;
+  width: 90%;
+  text-transform: uppercase;
+  font-size: 9.5rem;
+  justify-content: center;
+}
+
+.mini2{
+  font-size: 18px;
+  font-family: 'Oldenburg';
+  margin-top: -4.7%;
+  margin-right: 16%;
+  color: #1C1B19;
+  line-height: 1.2;
+  text-align: right;
+  justify-content: right;
+}
+
+.page9{
+  background: #8F9067;
+  z-index: 6;
+  overflow: hidden;
+  flex: 0 0 130vw;
+}
+
+.cartinki{
+  
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.image1 {
+  width: 80vw;
+  height: auto;
+}
+
+.image2 {
+  width: 30vw;
+  height: auto;
+}
+
+.page10 {
+  flex: 0 0 120vw;
+  background: #EDE7DB;
+  z-index: 7;
+  height: 100vh;
+  margin-left: -0.1%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.contains{
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  justify-content: space-between;
+}
+
+.righttext .pa10 {
+  color: #1C1B19;
+  font-family: 'Love Ya Like A Sister';
+  font-size: 2.6rem;
+  margin-top: 90%;
+  margin-left: 10%;
+}
+
+.pa101 {
+  color: #1C1B19;
+  font-family: 'League Spartan'; 
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-left: 40%;
+  margin-top: -82%;
+  width: 40%;
+}
+
+.im10 {
+  width: 120%;
+  height: auto;
+  object-fit: cover;
+}
+
+.page11 {
+  background: #C2862B;
+  flex: 0 0 45vw;
+  z-index: 8;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-left: -0.001%;
+}
+
+.grade {
+  margin-top: 80%;
+  display: grid;
+  grid-template-columns: 1fr auto 60px;
+  gap: 10px;
+  margin-right: 6%;
+  margin-left: 10%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.grade .pa111 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'League Spartan'; 
+  color: #1C1B19;
+  font-size: 17.5px;
+}
+
+.grade .pa112 {
+  color: #1C1B19;
+  font-family: 'League Spartan'; 
+  font-size: 16px;
+}
+
+.grade hr {
+  border: none;
+  grid-column: 2;
+  border-top: 2.7px dotted #353434;
+  margin: 5px 0;
+  width: 100%;
+  height: 0;
+}
+
+.page12{
+  z-index: 9;
+  background: #D69A3F;
+  flex: 0 0 100vw;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-left: -0.1%;
+}
+
+.colums{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.pa12 {
+  color: #1C1B19;
+  font-family: 'League Spartan'; 
+  font-size: 21px;
+  width: 55%;
+  grid-column: 1;
+  line-height: 1.3;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+.pa121{
+  grid-column: 1;
+  font-family: 'Oldenburg';
+  color: #1C1B19;
+  font-size: 22px;
+  margin-left: 15%;
+  margin-top: 25%;
+}
+
+.pa122{
+  margin-top: -3%;
+  grid-column: 1;
+  color: #1C1B19;
+  font-family: 'League Spartan'; 
+  font-size: 7rem;
+  text-transform: uppercase;
+  margin-left: 15%;
+  line-height: -2;
+}
+
+.pa123 {
+  grid-column: 3;
+  text-align: center;
+  padding: 2rem;
+  margin-top: -20%;
+}
+
+.pa123 img {
+  max-width: 75%;
+  margin-bottom: 10%;
+  margin-right: 15%;
+  height: auto;
+}
+
+.page13{
+  z-index: 10;
+  flex: 0 0 90vw;
+  background: #D69A3F;
+  overflow: hidden;
+}
+
+.page13 img{
+  z-index: 10;
+  width: 80vw;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
+}
+
+.page14 {
+  z-index: 11;
+  flex: 0 0 120vw;
+  background: #D69A3F;
+  overflow: hidden;
+}
+
+.three{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.pa14{
+  z-index: 11;
+  padding: 10%;
+  width: 40vw;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 30%;
+  align-items: center;
+  height: auto;
+}
+
+.lo{
+  width: 35vw;
+  margin-top: 31%;
+  height: auto;
+}
+.page15{
+  z-index: 12;
+  margin-left: -0.1%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #6E7980;
+  flex: 0 0 40vw;
+}
+
+.page16{
+  z-index: 13;
+  margin-left: -0.1%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  flex: 0 0 100vw;
+  background: #828D94;
+  overflow: hidden;
+}
+
+.lll {
+  margin-top: 70%;
+}
+.dop{
+  margin-top: 15%;
+}
+.page17{
+  z-index: 14;
+  flex: 0 0 80vw;
+  overflow: hidden;
+}
+
+.page17 img{
+  z-index: 14;
+  width: 80vw;
+  height: 100vh;
+  display: block;
+  object-fit: cover;
+}
+
+.page18{
+  flex: 0 0 90vw;
+  background: #828D94;
+  z-index: 15;
+  overflow: hidden;
+}
+
+.pa18_containers {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pa18_quote{
+  font-family: 'Oldenburg';
+  font-size: 1.4rem;
+  padding: 7% 7%;
+  font-weight: 100;
+  width: 90%;
+  color: #1C1B19;
+  text-indent: 150px;
+  grid-column: 1 / -1;
+}
+
+.pa18_twoout img {
+  grid-column: 1;
+  margin-left: 7%;
+  margin-top: 5%;
+  object-fit: cover;
+  width: 60vh;
+  height: auto;
+}
+
+.pa18_twoout p{
+  width: 25%;
+  line-height: 1.2;
+  margin-left: 52%;
+  margin-top: -12%;
+  object-fit: cover;
+  color: #1C1B19;
+  font-size: 20px;
+  font-family: 'League Spartan'; 
+}
+
+.page19{
+  z-index: 16;
+  flex: 0 0 100vw;
+  background: #828D94;
+  overflow: hidden;
+}
+
+.pa19_quote{
+  margin-left: 13%;
+}
+
+.pa19_p {
+  font-family: 'Oldenburg';
+  font-size: 18px;
+  color: #1C1B19;
+  margin-top: 6%; 
+}
+
+.pa19_h1{
+  color: #1C1B19;  
+  font-size: 9.5rem;
+  margin-top: 1%;
+  font-family: 'League Spartan'; 
+  text-transform: uppercase;
+  width: 80%;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.pa19_h2{
+  color: #1C1B19;  
+  font-size: 9.5rem;
+  margin-top: 0;
+  font-family: 'League Spartan'; 
+  text-transform: uppercase;
+  width: 80%;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.page20{
+  background: #828D94;
+  flex: 0 0 80vw;
+  z-index: 16;
+  overflow: hidden;
+}
+
+.pa20_quote{
+  color: #1C1B19;
+  font-family: 'Love Ya Like A Sister';
+  font-size: 2.5rem;
+  margin-left: 10%;
+  width: 74%;
+  line-height: 1.2;
+  margin-top: 10%;
+  text-indent: 150px;
+}
+.pa20_p{
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 20%;
+  font-family: 'League Spartan'; 
+  width: 25%;
+  margin-left: 60%;
+}
